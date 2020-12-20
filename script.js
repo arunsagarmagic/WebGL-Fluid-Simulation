@@ -222,7 +222,7 @@ function startGUI () {
         splatStack.push(parseInt(Math.random() * 20) + 5);
     } }, 'fun').name('Random splats');
 
-    setTimer(()=>{splatStack.push(parseInt(Math.random() * 20) + 5);}, 2000);
+    setTimeout(()=>{splatStack.push(parseInt(Math.random() * 20) + 5);}, 2000);
     let bloomFolder = gui.addFolder('Bloom');
     bloomFolder.add(config, 'BLOOM').name('enabled').onFinishChange(updateKeywords);
     bloomFolder.add(config, 'BLOOM_INTENSITY', 0.1, 2.0).name('intensity');
